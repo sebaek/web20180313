@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>탭 제목</title>
+    <style>
+        #p02 {
+            background-color: blue;
+        }
+
+        p.intro {
+            background-color: black;
+            color: white;
+            border: 1px solid grey;
+            padding: 10px;
+            margin: 30px;
+            font-size: 150%;
+        }
+
+        p {
+
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <p title="이것은 툴팁이다!!!" class="intro">Lorem ipsum dolor sit.</p>
+    <p id="p01">Lorem ipsum dolor sit.</p>
+    <p style="background-color: yellow; " id="p02" class="intro">Lorem ipsum dolor sit.</p>
+    <input type="date" name="" id="date01">
+    <input type="datetime" name="" id="date02">
+    <input type="datetime-local" name="" id="date03">
+    <button class="b01" onclick="show();">show</button>
+    <p id="result"></p>
+    <script>
+        function show() {
+            var text = document.getElementById("date01").value + "<br>";
+            text += document.getElementById("date02").value + "<br>";
+            text += document.getElementById("date03").value + "<br>";
+            document.getElementById("result").innerHTML = text;
+        }
+
+    </script>
+</body>
+
+</html>
