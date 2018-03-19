@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>계산기</title>
+    <style>
+        input {
+            text-align: right;
+            width: 30%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 7px 14px;
+            font-size: 24px;
+            text-align: center;
+            cursor: pointer;
+            outline: none;
+            color: #fff;
+            background-color: #4CAF50;
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 9px #999;
+        }
+
+        button:hover {
+            background-color: #3e8e41
+        }
+
+        button:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(4px);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <input type="number" name="" id="input1">
+        <br>
+        <input type="number" name="" id="input2">
+        <br>
+        <button id="sumBtn">&plus;</button>
+        <button id="subBtn">&minus;</button>
+        <button id="multiBtn">&times;</button>
+        <button id="divBtn">&divide;</button>
+        <button id="modBtn">mod</button>
+        <p>계산 결과는
+            <span id="result"></span>입니다.</p>
+    </div>
+</body>
+
+</html>
