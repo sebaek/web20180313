@@ -56,6 +56,66 @@
         <p>계산 결과는
             <span id="result"></span>입니다.</p>
     </div>
+    <script>
+        // 빼기
+        function subtract() {
+            var value1 =
+                document.getElementById("input1").value;
+            var value2 =
+                document.getElementById("input2").value;
+            document.getElementById("result").innerHTML =
+                value1 - value2;
+        }
+
+        document.getElementById("subBtn").onclick = subtract;
+
+        // 곱하기
+        function times() {
+            var value1 = document.getElementById("input1").value;
+            var value2 = document.getElementById("input2").value;
+
+            document.getElementById("result").innerHTML = value1 * value2;
+
+        }
+
+        document.getElementById("multiBtn").onclick = times;
+
+        // 나누기
+        function divide() {
+            var value1 = document.getElementById("input1").value;
+            var value2 = document.getElementById("input2").value;
+
+            document.getElementById("result").innerHTML = value1 / value2;
+
+        }
+
+        document.getElementById("divBtn").onclick = divide;
+        
+        // modular
+        function modular() {
+            var value1 = document.getElementById("input1").value;
+            var value2 = document.getElementById("input2").value;
+
+            document.getElementById("result").innerHTML = value1 % value2;
+
+        }
+
+        document.getElementById("modBtn").onclick = modular;
+
+        // sum
+        function sum() {
+            var value1 = document.getElementById("input1").value;
+            var value2 = document.getElementById("input2").value;
+            var valueNumber1 = Number(value1);
+            var valueNumber2 = Number(value2);
+
+            document.getElementById("result").innerHTML = valueNumber1 + valueNumber2;
+
+        }
+
+        document.getElementById("sumBtn").onclick = sum;
+
+    </script>
 </body>
 
 </html>
