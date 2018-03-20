@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+
+<head>
+
+</head>
+
+<body>
+    <input type="text" id="input1">
+    <p>
+        <span id="result"></span> 글자 입니다.</p>
+
+
+
+    <script>
+
+
+        document.getElementById("input1").onkeyup = showTextLength;
+
+        function showTextLength() {
+            var inputValue = document.getElementById("input1").value;
+            document.getElementById("result").innerHTML =
+                inputValue.length;
+        }
+
+    </script>
+</body>
+
+
+
+</html>
