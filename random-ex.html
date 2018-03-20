@@ -1,0 +1,38 @@
+<!doctype html>
+
+<html>
+
+<head></head>
+
+<body>
+    <input type="number" name="" id="number1">
+    <br>
+    <input type="number" name="" id="number2">
+    <br>
+    <button id="button1">임의의 수를 보여줘</button>
+    <p id="result"></p>
+
+    <script>
+        function showRandomNumber() {
+
+            var num1 = Number(document.getElementById("number1").value);
+            var num2 = Number(document.getElementById("number2").value);
+
+            var randumNumber =
+                (Math.floor(Math.random() * (num2 - num1 + 1)) + num1) + ", " +
+                (Math.floor(Math.random() * (num2 - num1 + 1)) + num1) + ", " + 
+                (Math.floor(Math.random() * (num2 - num1 + 1)) + num1) + ", " + 
+                (Math.floor(Math.random() * (num2 - num1 + 1)) + num1) + ", " + 
+                (Math.floor(Math.random() * (num2 - num1 + 1)) + num1)+ ", " +
+                (Math.floor(Math.random() * (num2 - num1 + 1)) + num1);
+
+            document.getElementById("result").innerHTML = randumNumber;
+        }
+
+        document.getElementById("button1").onclick = showRandomNumber;
+
+    </script>
+
+</body>
+
+</html>
