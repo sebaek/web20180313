@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+
+<head></head>
+
+<body>
+    <button onclick="showCoin();">동전던지기</button>
+    <br>
+    <img src="" alt="" id="coin-image">
+
+    <script>
+        function showCoin() {
+
+            var myImage = "";
+
+            myImage = Math.random() < 0.5 ? "img/동전앞.jpg" : "img/동전뒤.jpg";
+
+            document.getElementById("coin-image").src = myImage;
+
+        }
+
+
+    </script>
+</body>
+
+</html>
