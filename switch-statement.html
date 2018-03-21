@@ -1,0 +1,47 @@
+<!doctype html>
+
+<html>
+
+<head></head>
+
+<body>
+    <input type="text" id="input1">
+    <br>
+    <button id="button1" onclick="showResult();">점수?</button>
+    <p id="result"></p>
+
+    <script>
+        function showResult() {
+            var grade = document.getElementById("input1").value;
+            grade = grade.toLowerCase();
+            // console.log(grade);
+            var txt = "";
+
+            switch (grade) {
+                case "a":
+                    txt = "90점 이상입니다.";
+                    break;
+                case "b":
+                    txt = "80점 이상입니다.";
+                    break;
+                case "c":
+                    txt = "70점 이상입니다.";
+                    break;
+                case "d":
+                    txt = "60점 이상입니다.";
+                    break;
+                case "f":
+                    txt = "60점 미만입니다.";
+                    break;
+                default:
+                    txt = "올바른 값을 넣어주세요.";
+                    break;
+            }
+            document.getElementById("result").innerHTML = txt;
+
+        }
+
+    </script>
+</body>
+
+</html>
