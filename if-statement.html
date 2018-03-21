@@ -1,0 +1,59 @@
+<!doctype html>
+<html>
+
+
+<head>
+
+</head>
+
+<body>
+  <input type="number" id="input1">
+  <br>
+  <button id="button1" onclick="showResult();">등급을 보여줘</button>
+
+  <p id="result"></p>
+
+  <script>
+    function showResult() {
+      // 1. input 요소에 있는 value 가져옴.
+      var point = document.getElementById("input1").value;
+      // console.log(typeof point);
+      point = Number(point);
+      // console.log(typeof point);
+
+      var message = "";
+
+      // 2. if .. else if .. 작성.
+
+      if (point >= 90 && point <= 100) {
+        // console.log("point가 90보다 크고 100보다 작다.");
+        message = "A등급입니다.";
+      } else if (point >= 80 && point < 90) {
+        // console.log("point가 80보다 크고 90보다 작다.");
+        message = "B등급입니다.";
+      } else if (point >= 70 && point < 80) {
+        // console.log("point가 70보다 크고 80보다 작다.");
+        message = "C등급입니다.";
+      } else if (point >= 60 && point < 70) {
+        // console.log("point가 60보다 크고 70보다 작다.");
+        message = "D등급입니다.";
+      } else if (point >= 0 && point < 60) {
+        // console.log("point가 0보다 크고 60보다 작다.");
+        message = "F등급입니다.";
+      } else {
+        // console.log("범위를 벗어났다.");
+        message = "0과 100사이의 값을 입력해주세요.";
+      }
+
+      document.getElementById("result").innerHTML = message;
+      
+    }
+
+
+  </script>
+
+
+
+</body>
+
+</html>
