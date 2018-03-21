@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+
+<head></head>
+
+<body>
+  <p id="result"></p>
+
+  <script>
+    var text = "";
+    for (var i = 1; i <= 100; i++) {
+      var str = i + "";
+      if (/[369]/.test(str)) {
+        var arr = str.split("");
+        // console.log(arr);
+        var total = arr.reduce(function (sum, e) {
+          // console.log(e);
+          // console.log(/[369]/.test(e));
+          return (/[369]/.test(e)) ? sum + "짝" : sum;
+        }, "");
+
+        text += total + "<br>";
+      } else {
+        text += i + "<br>";
+      }
+
+    }
+
+    document.getElementById("result").innerHTML = text;
+
+
+  </script>
+</body>
+
+</html>
