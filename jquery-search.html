@@ -11,6 +11,7 @@
 
   <script>
     $(function () {
+      // 참고.. (li 요소를 넣는 코드)
       var text = '[{"fname":"Marlissa"},{"fname":"Geoff"},{"fname":"Lorenzo"},{"fname":"Conrade"},{"fname":"Lucious"},{"fname":"Ratikorn"},{"fname":"Myla"},{"fname":"Valoria"},{"fname":"Micheal"},{"fname":"Heidi"},{"fname":"Francis"},{"fname":"Tania"},{"fname":"Richmond"},{"fname":"George"},{"fname":"Sara"},{"fname":"Jesus"},{"fname":"Inessa"},{"fname":"Jacqueline"},{"fname":"Alfonso"},{"fname":"Raquel"},{"fname":"Stephan"},{"fname":"Allana"},{"fname":"Mihai"},{"fname":"Mohammed"},{"fname":"Gilbert"},{"fname":"Aubrey"},{"fname":"Christopher"},{"fname":"Monika"},{"fname":"Veneta"},{"fname":"Spyro"}]';
       var items = JSON.parse(text);
       var ul = $("#myul");
@@ -18,14 +19,16 @@
         ul.append("<li>" + val.fname + "</li>");
       });
 
+      // 실제 사용한 코드
       $("#input1").keyup(function() {
+
         var value = $(this).val();
         value = value.toLowerCase();
         $("li").each(function(i, elem) {
-          if ($(this).text().toLowerCase().indexOf(value) === -1) {
-            $(this).fadeOut(50);
+          if ($(elem).text().toLowerCase().indexOf(value) === -1) {
+            $(elem).fadeOut(50);
           } else {
-            $(this).fadeIn(50);
+            $(elem).fadeIn(50);
           }
         });
 

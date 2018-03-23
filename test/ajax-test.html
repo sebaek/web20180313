@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  </script>
+</head>
+
+<body>
+  <h1>AJAX 연습</h1>
+  <button id="myBtn">더보기</button>
+  <table id="myTable">
+    <tr>
+      <th>first name</th>
+      <th>last name</th>
+      <th>age</th>
+
+    </tr>
+  </table>
+
+  <p id="myP">RESULT TEXT: </p>
+
+  <ul id="results">
+    
+  </ul>
+
+
+  <script>
+    document.getElementById("myBtn").onclick = function () {
+      // var xhr = new XMLHttpRequest();
+      // xhr.onreadystatechange = function () {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     document.getElementById("myP").innerHTML += this.responseText;          
+      //   }
+      // }
+      // xhr.open("GET", "http://www.filltext.com/?rows=3&fname={firstName}&lname={lastName}&age={numberRange|20,30}");
+      // xhr.send();
+
+      var results = document.getElementById('results');
+      var r = new XMLHttpRequest();
+      r.open("GET", "http://www.filltext.com?rows=10&f={firstName}", true);
+      r.onreadystatechange = function () {
+        if (r.readyState != 4 || r.status != 200) return;
+        var data = JSON.parse(r.responseText);
+        for (i = 0; i < data.length; i++) {
+          results.innerHTML += '<li>' + data[i].f + '</li>'
+        }
+      };
+      r.send();
+
+
+    }
+
+  </script>
+</body>
+
+</html>

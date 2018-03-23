@@ -1,0 +1,56 @@
+body {
+
+  padding-top: 70px;
+}
+
+.my-product-row {
+
+  margin-top: 20px;
+
+}
+.my-product-container {
+  margin-top: 50px;
+}
+
+
+
+.my-product-row .panel-footer{
+  text-align: center;
+}
+
+.my-footer {
+  background-color: #222;
+  color: #fff;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  margin-top: 50px;
+}
+
+.my-footer a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.my-list-group {
+  padding:0px;
+  padding-left: 50px;
+  margin:0px;
+  list-style-type: none;
+}
+
+.my-list-group-item {
+  margin: 15px;
+}
+
+#my-detail-cart-button {
+  background-color: #222;
+  color: #fff;
+}
+.my-detail-desc-button-container {
+  text-align: center;
+}
+
+.my-login-container {
+
+  margin: 70px auto 120px auto;
+}
