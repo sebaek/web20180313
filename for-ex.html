@@ -1,0 +1,145 @@
+<!doctype html>
+
+<html>
+
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      for (var i = 1; i <= 5; i++) {
+        $("#result1").append(i + "<br>");
+      }
+
+      for (var i = 5; i >= 1; i--) {
+        $("#result2").append(i + "<br>");
+      }
+
+      for (var i = 2; i <= 10; i += 2) {
+        $("#result3").append(i + "<br>");
+      }
+
+      for (var i = 10; i >= 2; i -= 2) {
+        $("#result4").append(i + "<br>");
+      }
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 1; j <= 5; j++) {
+          $("#result5").append(j);
+        }
+        $("#result5").append("<br>");
+      }
+
+      $("body").prepend($("<p id='result6'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 5; j >= 1; j--) {
+          $("#result6").append(j);
+        }
+        $("#result6").append("<br>");
+      }
+
+      $("body").prepend($("<p id='result7'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 0; j <= i; j++) {
+          $("#result7").append("*");
+        }
+        $("#result7").append("<br>");
+      }
+
+
+      $("body").prepend($("<p id='result8'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < (5 - i); j++) {
+          $("#result8").append("*");
+        }
+        $("#result8").append("<br>");
+      }
+
+
+      $("body").prepend($("<p id='result9'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < (4 - i); j++) {
+          $("#result9").append("&nbsp;");
+        }
+
+        for (var k = 0; k < i + 1; k++) {
+          $("#result9").append("*");
+        }
+        $("#result9").append("<br>");
+      }
+
+
+      $("body").prepend($("<p id='result10'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 0; j < i; j++) {
+          $("#result10").append("&nbsp;");
+        }
+
+        for (var k = 0; k < (5 - i); k++) {
+          $("#result10").append("*");
+        }
+        $("#result10").append("<br>");
+      }
+
+      $("body").prepend($("<p id='result11'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 1; j < (i + 2); j++) {
+          $("#result11").append(j);
+        }
+        $("#result11").append("<br>");
+      }
+
+
+      $("body").prepend($("<p id='result12'></p>"));
+
+      for (var i = 0; i < 5; i++) {
+        for (var j = 5; j >= (5 - i); j--) {
+          $("#result12").append(j);
+        }
+        $("#result12").append("<br>");
+      }
+
+      $("body").prepend($("<p id='result13'></p>"));
+
+      for (var i = 0, k = 1; i < 5; i++) {
+        for (var j = 0; j <= i; j++, k++) {
+          $("#result13").append(k % 10);
+        }
+        $("#result13").append("<br>");
+      }
+
+
+
+    });
+
+  </script>
+  <style>
+    p {
+
+      border: 1px solid black;
+      padding: 15px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+
+<body>
+  <p id="result1"></p>
+
+  <p id="result2"></p>
+  <p id="result3"></p>
+  <p id="result4"></p>
+  <p id="result5"></p>
+
+
+
+
+
+</body>
+
+</html>
