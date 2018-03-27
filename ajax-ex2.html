@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+
+<body>
+  <button id="myBtn">더보기</button>
+  <ul id="result"></ul>
+  <script>
+    $(function() {
+      $("#myBtn").on("click", function () {
+        $.get("http://www.filltext.com/?rows=2&fname={firstName}&lname={lastName}&age={number}")
+        .done(function(data) {
+          // console.log(data);
+          // console.log(data[0].fname);
+          $.each(data, function (i, val) {
+            $("#result").append("<li>" + val.fname + ", " + val.lname + "</li>");
+          })
+        });
+      });
+    });
+  </script>
+</body>
+
+</html>
