@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+  var reg = /^d.*g$/;
+  console.log(reg.test("doeg"));//true
+  console.log(reg.test("adog"));//false
+  console.log(reg.test("dooge"));//false
+
+  var str = "1280x768"; //768x1280;
+
+  console.log(str.replace(/(\d+)x(\d+)/, "$2x$1"));
+
+
+  
+  </script>
+</body>
+</html>
