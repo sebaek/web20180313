@@ -131,28 +131,29 @@ $(function () {
         $(this).attr("my-data-sort-order", "asc");
       }
     }
-
-    console.log(col);
+    order = $(this).attr("my-data-sort-order");
+    // console.log(col);
     datas.sort(function (a, b) {
       if (order === "asc") {
         if (a[col].toLowerCase() < b[col].toLowerCase()) {
-          return 1;
-        } else if (a[col].toLowerCase() > b[col].toLowerCase()) {
           return -1;
+        } else if (a[col].toLowerCase() > b[col].toLowerCase()) {
+          return 1;
         } else {
           return 0;
         }
       } else {
         if (a[col].toLowerCase() < b[col].toLowerCase()) {
-          return -1;
-        } else if (a[col].toLowerCase() > b[col].toLowerCase()) {
           return 1;
+        } else if (a[col].toLowerCase() > b[col].toLowerCase()) {
+          return -1;
         } else {
           return 0;
         }
       }
     });
-    console.log(datas);
+    // console.log(datas);
+    $("#result th").not($(this)).attr("my-data-sort-order", "");
     $("#result tr:not('#my-table-heading-row')").remove();
 
     $.each(datas, function (i, data) {
