@@ -1,0 +1,42 @@
+/* body {
+  font-family: 'Malgun Gothic', sans-serif;
+} */
+.panel {
+  text-align: center;
+}
+
+.panel a:hover {
+  opacity: 0.5;
+}
+
+.my-footer-container {
+  background-color: #222;
+  color: white;
+  margin-top : 50px;
+  padding-top: 20px;
+}
+
+.my-footer-container a.list-group-item, .my-footer-container * {
+  background-color: #222;
+  color: white;
+  border : none;
+  text-align: center;
+}
+
+.my-footer-container a.list-group-item:hover {
+  background-color: #555;
+}
+
+.my-login-container {
+
+  margin-top: 70px;
+  margin-bottom: 100px;
+}
+
+nav li {
+  border-top : 5px solid #222;
+  border-bottom : 5px solid #222;
+}
+nav li:hover {
+  border-bottom : 5px solid grey;
+}
