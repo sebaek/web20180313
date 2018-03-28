@@ -1,0 +1,35 @@
+.my-product-list-container {
+
+  margin-top : 50px;
+}
+
+.my-product-list-container .panel-header {
+  text-align: center;
+}
+
+.my-product-list-container img:hover {
+  opacity: 0.5;
+}
+
+.my-footer-container {
+  margin-top : 50px;
+  padding-top : 20px;
+  background-color: #222;
+}
+
+.my-footer-container *,
+.my-footer-container a.list-group-item {
+  background-color: #222;
+  color: white;
+  border: none;
+}
+
+.my-product-deatil-button-container {
+  text-align: center;
+}
+
+.my-login-container {
+  margin-top : 100px;
+  margin-bottom : 200px;
+
+}
