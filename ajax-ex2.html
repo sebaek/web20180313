@@ -13,7 +13,8 @@
   <script>
     $(function() {
       $("#myBtn").on("click", function () {
-        $.get("http://www.filltext.com/?rows=2&fname={firstName}&lname={lastName}&age={number}")
+        // $.get("http://www.filltext.com/?rows=2&fname={firstName}&lname={lastName}&age={number}")
+        $.getJSON("sample.txt")
         .done(function(data) {
           // console.log(data);
           // console.log(data[0].fname);
