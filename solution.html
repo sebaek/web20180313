@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <title>Document</title>
+
+  <script>
+    $(function() {
+      function showMax() {
+        var num1 = Number($("#input1").val());
+        var num2 = Number($("#input2").val());
+        // console.log(num1);
+        // console.log(num2);
+        if (num1 > num2) {
+          $("#result").text(num1);
+        } else {
+          $("#result").text(num2);
+        }
+      }
+
+      function showMin() {
+        var num1 = Number($("#input1").val());
+        var num2 = Number($("#input2").val());
+        // console.log(num1);
+        // console.log(num2);
+        if (num1 < num2) {
+          $("#result").text(num1);
+        } else {
+          $("#result").text(num2);
+        }
+      }
+
+      $("#btn1").on("click", showMax);
+      $("#btn2").on("click", showMin);
+
+
+      // 문제2.
+      $("#p2-btn1").on("click", function() {
+        var text1 = $("#p2-input1").val();
+        var text2 = $("#p2-input2").val();
+
+        $("#p2-result").text(text2.indexOf(text1));
+
+      });
+
+      // 문제3.
+      $("#p3-btn1").on({
+        "click": function() {
+          var num1 = Number($("#p3-input1").val());
+          var num2 = Number($("#p3-input2").val());
+
+          var max = num2 > num1 ? num2 : num1;
+          var min = num2 < num1 ? num2 : num1;
+
+          var ran = Math.floor(Math.random() * (max - min + 1)) + min;
+
+          $("#p3-result").text(ran);
+        }
+      });
+
+      //문제 4.
+
+      $("#p4-btn1").click(function() {
+        $("#p4-result").empty();
+        var num = Number($("#p4-input1").val());
+        for (var i = 0; i < num; i++) {
+          // console.log(i);
+          for (var j = 0; j <= i; j++) {
+            $("#p4-result").append("*");
+          }
+          $("#p4-result").append("<br>");
+        }
+
+      });
+
+
+      // 문제 5.
+      $("#p5-btn1").click(function() {
+        var num = Number($("#p5-input1").val());
+        var text = "";
+
+        for (var i = 1; i <= 9; i++) {
+          // console.log(num * i);
+
+          text += num + " * " + i + " = " + (num * i) + "<br>";
+        }
+
+        $("#p5-result").html(text);
+      });
+
+      // 문제 6.
+      $("#p6-btn1").click(function() {
+        var text = "";
+
+        for (var i = 2; i <= 9; i++) {
+          for (var j = 1; j <= 9; j++) {
+            text += i + " * " + j + " = " + (i * j) + "<br>";
+          }
+        }
+
+
+        $("#p6-result").html(text);
+
+      });
+
+      // 문제 7.
+      $("#p7-btn1").click(function() {
+        var text = "";
+
+        for (var i = 2; i <= 9; i += 2) {
+          for (var j = 1; j <= 9; j++) {
+            text += i + " * " + j + " = " + (i * j) + "<br>";
+          }
+        }
+
+
+        $("#p7-result").html(text);
+
+      });
+
+      // 문제 8.
+      var p8num = 0;
+      $("#p8-btn2").click(function() {
+        p8num = Math.floor(Math.random() * 100) + 1;
+        console.log("랜덤 수는 : " + p8num);
+      });
+
+      $("#p8-btn1").click(function() {
+        var num = Number($("#p8-input1").val());
+
+        if (num == p8num) {
+          $("#p8-result").html("정답입니다. 수는 :" + p8num);
+        } else if (num < p8num) {
+          $("#p8-result").html("더 큰 수를 입력해보세요.");
+        } else {
+          $("#p8-result").html("더 작은 수를 입력해보세요.");
+        }
+      });
+      $("#p8-btn2").click();
+    
+    });
+  </script>
+</head>
+
+<body>
+  <input type="text" id="input1"><br>
+  <input type="text" id="input2"><br>
+  <button id="btn1">큰 값</button><button id="btn2">작은 값</button>
+  <p id="result"></p>
+
+  <hr>
+
+  <input type="text" id="p2-input1"><br>
+  <input type="text" id="p2-input2"><br>
+  <button id="p2-btn1">인덱스 보여줘</button>
+  <p id="p2-result"></p>
+
+  <hr>
+
+  <input type="number" id="p3-input1"><br>
+  <input type="number" id="p3-input2"><br>
+  <button id="p3-btn1">랜덤한 값 보여줘</button>
+  <p id="p3-result"></p>
+
+  <hr>
+
+  <input type="text" id="p4-input1">
+  <br>
+  <button id="p4-btn1">별표 보여줘</button>
+  <p id="p4-result"></p>
+
+  <hr>
+  <input type="text" id="p5-input1">
+  <br>
+  <button id="p5-btn1">구구단 보여줘</button>
+  <p id="p5-result"></p>
+
+  <hr>
+  <button id="p6-btn1">구구단 모두 보여줘</button>
+  <div id="p6-result"></div>
+
+
+  <hr>
+  <button id="p7-btn1">구구단 짝수단만 보여줘</button>
+  <div id="p7-result"></div>
+
+  <hr>
+  <input type="text" id="p8-input1"><br>
+  <button id="p8-btn1">확인!!!!</button><br>
+  <button id="p8-btn2">새 게임</button>
+  <div id="p8-result"></div>
+</body>
+
+</html>
