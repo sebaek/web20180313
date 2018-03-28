@@ -1,77 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- jQuery library -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="array-sort.js"></script>
+
+
   <title>Document</title>
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(function () {
 
-      var items = [
-        {
-          "fname": "Linnette",
-          "lname": "Coffell",
-          "age": 30
-        },
-        {
-          "fname": "Chanel",
-          "lname": "Lafave",
-          "age": 30
-        },
-        {
-          "fname": "Jim",
-          "lname": "Moghadam",
-          "age": 21
-        },
-        {
-          "fname": "Myla",
-          "lname": "Shiffman",
-          "age": 20
-        },
-        {
-          "fname": "Giuseppe",
-          "lname": "Forsyth",
-          "age": 21
-        },
-        {
-          "fname": "Mosharraf",
-          "lname": "Cripps",
-          "age": 27
-        },
-        {
-          "fname": "Melody",
-          "lname": "Stubbs",
-          "age": 20
-        },
-        {
-          "fname": "Kamal",
-          "lname": "Kieser",
-          "age": 26
-        },
-        {
-          "fname": "Janine",
-          "lname": "Collier",
-          "age": 29
-        },
-        {
-          "fname": "Madonna",
-          "lname": "Daniello",
-          "age": 27
-        }
-      ];
-
-      
-
-    });
-
-  </script>
 </head>
 
 <body>
+  <div class="container">
+    <div class="table-responsive">
+      <table class="table" id="result">
+        <tr id="my-table-heading-row">
+          <th my-data-sort-col="fname">First Name</th>
+          <th my-data-sort-col="lname">Last Name</th>
+          <th my-data-sort-col="email">Email</th>
+          <th my-data-sort-col="pw">Password</th>
+          <th my-data-sort-col="phone">Phone Number</th>
+          <th my-data-sort-col="company">Company</th>
+          <th my-data-sort-col="desc">Desc</th>
+        </tr>
+      </table>
+    </div>
+  </div>
 
 </body>
 
