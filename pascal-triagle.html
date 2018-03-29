@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $(function() {
+    $("#button1").click(function() {
+      var num = + $("#input1").val();
+      var $resultDiv = $("#result").empty();
+      var array = [1];
+      var printToDiv = function (txt) {
+        $resultDiv.append(txt.join(","));
+        $resultDiv.append("<br>");
+      }
+
+      if (num < 0) return;
+
+      for (var i = 0; i < num; i++) {
+        for (var j = array.length - 2; j > 0; j--) {
+          array[j] = array[j] + array[j-1];
+        }
+        printToDiv(array);
+        array.push(1);
+      }
+    });
+  });
+  
+  
+  </script>  
+  <title>Document</title>
+</head>
+<body>
+  <input type="number" id="input1">
+  <br>
+  <button id="button1">출력</button>
+  <div id="result"></div>
+</body>
+</html>
