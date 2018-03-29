@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+    $(function () {
+
+      function checkPalindrom(text) {
+        var isPalindrom = false;
+        // your code...
+        text = text.toLowerCase();
+
+        var left = 0;
+        var right = text.length - 1;
+
+        while (left < right) {
+          while (text.charAt(left) < "a" || "z" < text.charAt(left)) {
+            left++;
+          }
+          while (text.charAt(right) < "a" || "z" < text.charAt(right)) {
+            right--;
+          }
+          if (text.charAt(left) != text.charAt(right)) {
+            return false;
+          }
+          left++;
+          right--;
+        }
+
+        return true;
+      }
+
+
+      $("p").each(function (i, elem) {
+        // console.log($(elem).text());
+        $("#result").append(checkPalindrom($(elem).text()) + ":" + $(elem).text() + "<br>");
+      });
+
+
+
+
+    }); 
+  </script>
+
+  <title>Document</title>
+
+</head>
+
+<body>
+  <p>A but tuba.</p>
+  <p>A car, a man, a maraca.</p>
+  <p>A dog, a plan, a canal: pagoda.</p>
+  <p>A dog! A panic in a pagoda!</p>
+  <p>A lad named E. Mandala</p>
+  <p>A man, a plan, a canal: Panama.</p>
+  <p>A man, a plan, a cat, a ham, a yak, a yam, a hat, a canal-Panama!</p>
+  <p>A new order began, a more Roman age bred Rowena.</p>
+  <p>A nut for a jar of tuna.</p>
+  <p>A Santa at Nasa.</p>
+  <p>A Santa dog lived as a devil God at NASA.</p>
+  <p>A slut nixes sex in Tulsa.</p>
+  <p>A tin mug for a jar of gum, Nita.</p>
+  <p>A Toyota! Race fast, safe car! A Toyota!</p>
+  <p>A Toyota’s a Toyota.</p>
+  <p>Able was I ere I saw Elba.</p>
+  <p>Acrobats stab orca.</p>
+  <p>Aerate pet area.</p>
+  <p>Ah, Satan sees Natasha!</p>
+  <p>Aibohphobia</p>
+  <p>Air an aria.</p>
+  <p>Al lets Della call Ed Stella.</p>
+  <p>alula</p>
+  <p>Amen icy cinema.</p>
+  <p>Amore, Roma.</p>
+  <p>Amy, must I jujitsu my ma?</p>
+  <p>Ana</p>
+  <p>Animal loots foliated detail of stool lamina.</p>
+  <p>Anna</p>
+  <p>Anne, I vote more cars race Rome to Vienna.</p>
+  <p>Are Mac ‘n’ Oliver ever evil on camera?</p>
+  <p>Are we not drawn onward to new era?</p>
+  <p>Are we not drawn onward, we few, drawn onward to new era?</p>
+  <p>Are we not pure? “No sir!” Panama’s moody Noriega brags. “It is garbage!” Irony dooms a man; a prisoner up to new era.</p>
+  <p>Art, name no tub time. Emit but one mantra.</p>
+  <p>As I pee, sir, I see Pisa!</p>
+  <p>Avid diva.</p>
+  <p>Taco Cat</p>
+  <p>No garden, one dragon.</p>
+  <p>Darn ocelots stole Conrad!</p>
+  <p>Stressed was I ere I saw desserts.</p>
+  <p>In girum imus nocte, et consumimur igni.</p>
+  <div id="result"></div>
+
+</body>
+
+</html>
